@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "916a285d-417d-488e-8b9e-92bc243cff7a",
+		"name": "Router Web App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sign Up User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"harshada\",\r\n    \"password\": \"1234\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "harshada",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Router List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJjYThlNTkyZS0zODBjLTQ5ZTUtODkxMC04OWUzZTA5MWFkZmQiLCJleHAiOjE2NDY5MDYwMDV9.UciL7QpczxacAvHPaqFhSZ7frMUkKOC0iu96KbQFhhY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/routers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"routers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Router",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJjYThlNTkyZS0zODBjLTQ5ZTUtODkxMC04OWUzZTA5MWFkZmQiLCJleHAiOjE2NDY5MDYwMDV9.UciL7QpczxacAvHPaqFhSZ7frMUkKOC0iu96KbQFhhY",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"hostname\": \"Work server\",\r\n    \"loopback\": \"1\",\r\n    \"macaddr\": \"192.168.21.22\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/router",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"router"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete Router",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-access-tokens",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwdWJsaWNfaWQiOiJjYThlNTkyZS0zODBjLTQ5ZTUtODkxMC04OWUzZTA5MWFkZmQiLCJleHAiOjE2NDY5MDYwMDV9.UciL7QpczxacAvHPaqFhSZ7frMUkKOC0iu96KbQFhhY",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:5000/routers/8bf0035b-095e-42ec-a904-848d221ea7dd",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"routers",
+						"8bf0035b-095e-42ec-a904-848d221ea7dd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
