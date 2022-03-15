@@ -11,7 +11,7 @@ app = Flask(__name__)
 dirname = os.path.dirname(__file__)
 filename = os.path.join(dirname, 'routerinfo.db') 
 app.config['SECRET_KEY']='004f2af45d3a4e161a7dd2d17fdae47f'
-app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///F:\\Projects\\RouterWebApp\\routerinfo.db' #Absolute path of db accordng to the respective system
+app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///C:\\f_app\\routerinfo.db' #Absolute path of db accordng to the respective system
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
  
 db = SQLAlchemy(app)
