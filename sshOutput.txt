@@ -1,0 +1,2 @@
+List of file present on the remote server's root folder: 
+['foo.bar\n', 'testfile.txt\n']
